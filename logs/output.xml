@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230605 10:47:56.245" rpa="false" schemaversion="3">
+<suite id="s1" name="Tests" source="C:\QAx\projects\mark85-robot-express\tests">
+<suite id="s1-s1" name="Online" source="C:\QAx\projects\mark85-robot-express\tests\online.robot">
+<test id="s1-s1-t1" name="Webapp deve estar Online" line="7">
+<kw name="Start Session">
+<msg timestamp="20230605 10:47:56.951" level="FAIL">No keyword with name 'Start Session' found.</msg>
+<status status="FAIL" starttime="20230605 10:47:56.951" endtime="20230605 10:47:56.951"/>
+</kw>
+<kw name="Get Title" library="Browser">
+<arg>equal</arg>
+<arg>Mark85 by QAx</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="NOT RUN" starttime="20230605 10:47:56.951" endtime="20230605 10:47:56.951"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230605 10:47:56.951" endtime="20230605 10:47:56.951"/>
+</kw>
+<status status="FAIL" starttime="20230605 10:47:56.947" endtime="20230605 10:47:56.951">No keyword with name 'Start Session' found.</status>
+</test>
+<doc>Online</doc>
+<status status="FAIL" starttime="20230605 10:47:56.261" endtime="20230605 10:47:56.957"/>
+</suite>
+<suite id="s1-s2" name="Signup" source="C:\QAx\projects\mark85-robot-express\tests\signup.robot">
+<test id="s1-s2-t1" name="Deve poder cadastrar um novo usuários" line="8">
+<kw name="Start Session">
+<msg timestamp="20230605 10:47:57.294" level="FAIL">No keyword with name 'Start Session' found.</msg>
+<status status="FAIL" starttime="20230605 10:47:57.294" endtime="20230605 10:47:57.294"/>
+</kw>
+<kw name="Go To" library="Browser">
+<arg>http://localhost:3000/signup</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<status status="NOT RUN" starttime="20230605 10:47:57.295" endtime="20230605 10:47:57.295"/>
+</kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=h1</arg>
+<arg>visible</arg>
+<arg>10</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" starttime="20230605 10:47:57.295" endtime="20230605 10:47:57.295"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>css=h1</arg>
+<arg>equal</arg>
+<arg>Faça seu cadastro</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20230605 10:47:57.295" endtime="20230605 10:47:57.295"/>
+</kw>
+<kw name="Name" library="FakerLibrary">
+<var>${name}</var>
+<doc>:example 'John Doe'</doc>
+<status status="NOT RUN" starttime="20230605 10:47:57.296" endtime="20230605 10:47:57.296"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>id=name</arg>
+<arg>${name}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20230605 10:47:57.296" endtime="20230605 10:47:57.296"/>
+</kw>
+<kw name="Email" library="FakerLibrary">
+<var>${email}</var>
+<status status="NOT RUN" starttime="20230605 10:47:57.296" endtime="20230605 10:47:57.296"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>id=email</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20230605 10:47:57.296" endtime="20230605 10:47:57.296"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${password}</var>
+<arg>pwd123</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230605 10:47:57.297" endtime="20230605 10:47:57.297"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>id=password</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20230605 10:47:57.297" endtime="20230605 10:47:57.297"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>id=buttonSignup</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20230605 10:47:57.297" endtime="20230605 10:47:57.297"/>
+</kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=.notice p</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" starttime="20230605 10:47:57.297" endtime="20230605 10:47:57.297"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<arg>css=.notice p</arg>
+<arg>equal</arg>
+<arg>Boas vindas ao Mark85, o seu gerenciador de tarefas.</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="NOT RUN" starttime="20230605 10:47:57.298" endtime="20230605 10:47:57.298"/>
+</kw>
+<status status="FAIL" starttime="20230605 10:47:57.289" endtime="20230605 10:47:57.298">No keyword with name 'Start Session' found.</status>
+</test>
+<doc>Cenários de teste do cadastro de usuários</doc>
+<status status="FAIL" starttime="20230605 10:47:56.960" endtime="20230605 10:47:57.302"/>
+</suite>
+<status status="FAIL" starttime="20230605 10:47:56.246" endtime="20230605 10:47:57.305"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Online">Tests.Online</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s2" name="Signup">Tests.Signup</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230605 10:47:56.264" level="ERROR">Error in file 'C:\QAx\projects\mark85-robot-express\tests\online.robot' on line 3: Importing library '../resources/base.robot' failed: ModuleNotFoundError: No module named '.'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Python311\Scripts\robot.exe
+  C:\Python311\python311.zip
+  C:\Python311\DLLs
+  C:\Python311\Lib
+  C:\Python311
+  C:\Python311\Lib\site-packages</msg>
+<msg timestamp="20230605 10:47:56.963" level="ERROR">Error in file 'C:\QAx\projects\mark85-robot-express\tests\signup.robot' on line 3: Importing library '../resources/base.robot' failed: ModuleNotFoundError: No module named '.'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Python311\Scripts\robot.exe
+  C:\Python311\python311.zip
+  C:\Python311\DLLs
+  C:\Python311\Lib
+  C:\Python311
+  C:\Python311\Lib\site-packages</msg>
+</errors>
+</robot>
