@@ -13,22 +13,12 @@ Deve poder cadastrar um novo usuários
     ...    email=papito@yahoo.com    
     ...    password=pwd123
 
-    Remove user from database    ${user}[email] 
+    Remove user from database    ${user}[email]
+
+    Go to signup page
+    Submit sign up form    ${user}
+    Notice should be       Boas vindas ao Mark85, o seu gerenciador de tarefas. 
     
-    Go To                      http://localhost:3000/signup
-
-    Wait For Elements State    css=h1              visible        10
-    Get Text                   css=h1              equal          Faça seu cadastro
-
-    Fill Text                  id=name             ${user}[name]
-    Fill Text                  id=email            ${user}[email]
-    Fill Text                  id=password         ${user}[password]
-
-    Click                      id=buttonSignup
-
-    Wait For Elements State    css=.notice p        visible    5
-    Get Text                   css=.notice p        equal    Boas vindas ao Mark85, o seu gerenciador de tarefas.
-
 Não deve permitir o cadastro com o email duplicado
     [Tags]    dup
 
@@ -40,16 +30,6 @@ Não deve permitir o cadastro com o email duplicado
     Remove user from database    ${user}[email]
     Insert user from database    ${user}
 
-    Go To    http://localhost:3000/signup
-
-    Wait For Elements State    css=h1              visible        10
-    Get Text                   css=h1              equal          Faça seu cadastro
-
-    Fill Text                  id=name             ${user}[name]
-    Fill Text                  id=email            ${user}[email]
-    Fill Text                  id=password         ${user}[password]
-
-    Click                      id=buttonSignup
-
-    Wait For Elements State    css=.notice p        visible    5
-    Get Text                   css=.notice p        equal      Oops! Já existe uma conta com o e-mail informado.
+    Go to signup page
+    Submit sign up form    ${user}
+    Notice should be       Oops! Já existe uma conta com o e-mail informado.
